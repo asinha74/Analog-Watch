@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <!-- Content Type Meta tag -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Watch Task</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>  
+	<body>
+		<div id="main-container">
+			<canvas id="watch-area" width="400px" height="400px"></canvas>
+		</div>
+	</body>
+	<script type="text/javascript" src="watch.js"></script>
+	<script type="text/javascript">
+	var watchBlock = new Watch("watch-area");
+	animate();
+
+	function animate() {
+		watchBlock.draw();
+		/*	Execute the function animate() with 50 milliseconds delay.	*/
+		window.setTimeout("animate()", 50);
+	}
+	</script>
+</html>
